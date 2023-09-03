@@ -1,42 +1,133 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Red Hat Text', sans-serif;
+}
+
+.background {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
 #root {
-  max-width: 1280px;
+  max-width: 100%;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
+  height: 100%;
+}
+
+body > #root > div {
+  height: 100vh;
+  width: 100vw;
+}
+
+.time-card-holder {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99;
+  transform: translateY(120%);
+}
+
+.time-card {
+  position: relative;
+  width: 25%;
+  font-size: 4vw ;
+  font-weight: 600;
+  margin: 0 30px;
+  color: #FB5E84;
+}
+
+.time-card-label {
+  font-size: 1vw;
+  font-weight: 600;
+  color: #8385A9;
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.time {
+  position: absolute;
+  top: 41%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.mountains {
+  z-index: 11;
+}
+
+.stars {
+  z-index: 10;
+}
+
+.time-card-img {
+  width: 100%;
+}
+
+.main-text {
+  color: #fff;
+  letter-spacing: 0.5vw;
+  font-size: 1.5vw;
+  transform: translateY(300%);
+}
+
+.socials {
+  position: fixed;
+  display: flex;
+  margin: 0 auto;
+  z-index: 12;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+  margin: 0 20px;
+  cursor: pointer;
 }
+
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  filter: brightness(0) saturate(100) invert(65%) sepia(39%) saturate(5695%) hue-rotate(309deg) brightness(97%) contrast(103%);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 480px) {
+  .time-card-holder {
+    width: 100%;
   }
-  to {
-    transform: rotate(360deg);
+
+  .time-card {
+    margin: 0 10px;
   }
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  .time {
+    font-size: 9vw;
   }
-}
 
-.card {
-  padding: 2em;
-}
+  .time-card-label {
+    font-size: 2.5vw;
+  }
 
-.read-the-docs {
-  color: #888;
+  .background {
+    width: 120%;
+  }
+  .mountains {
+    transform: translate(-60%, -100%) scale(3, 4);
+  }
+  .stars {
+    transform: scale(-4);
+  }
+
+  .main-text {
+    font-size: 7vw;
+    font-weight: 500;
+    width: 80%;
+    margin: 0 auto;
+    transform: translateY(50%);
+  }
 }
