@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 import { getTimeBetweenDates } from './getTimeBetweenDates';
 import background from './assets/Rectangle.svg'
@@ -16,7 +16,16 @@ function App() {
   const timeLabels = ['days', 'hours', 'minutes', 'seconds']
 
   setInterval(() => {setTimeBetween(getTimeBetweenDates(new Date(), endDate))}, 1000)
- 
+  
+  useEffect(() => {
+    let d = new Date();
+    d.setMonth(d.getMonth() + 1, 0);
+    d.setHours(0);
+    d.setMinutes(0);
+    d.setSeconds(0);
+    setEndDate(d);
+  }, [])
+
   return (
       <>
         <div style={{
@@ -64,8 +73,6 @@ function App() {
           <img className='background stars'
             src={stars}>
           </img>
-
-          
         </div>
       </>
   )
