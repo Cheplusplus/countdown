@@ -29,7 +29,7 @@ body > #root > div {
   align-items: center;
   justify-content: center;
   z-index: 99;
-  transform: translateY(120%);
+  transform: translateY(80%);
 }
 
 .time-card {
@@ -37,7 +37,7 @@ body > #root > div {
   width: 25%;
   font-size: 4vw ;
   font-weight: 600;
-  margin: 0 30px;
+  margin: 0 15px;
   color: #FB5E84;
 }
 
@@ -60,6 +60,7 @@ body > #root > div {
 
 .mountains {
   z-index: 11;
+  transform: translateY(10%);
 }
 
 .stars {
@@ -99,6 +100,7 @@ body > #root > div {
 @media (max-width: 480px) {
   .time-card-holder {
     width: 100%;
+    transform: translateY(220%);
   }
 
   .time-card {
@@ -128,6 +130,6 @@ body > #root > div {
     font-weight: 500;
     width: 80%;
     margin: 0 auto;
-    transform: translateY(50%);
+    transform: translateY(160%);
   }
 }
