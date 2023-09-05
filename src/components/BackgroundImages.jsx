@@ -2,7 +2,7 @@ import '../App.css'
 import mountains from '../assets/Group 5.svg'
 import stars from '../assets/Combined Shape.svg'
 
-const Background = () => {
+const BackgroundImages = () => {
   return (
     <>
         <img className='background mountains'
@@ -15,4 +15,4 @@ const Background = () => {
   )
 }
 
-export default Background
+export default BackgroundImages

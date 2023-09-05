@@ -3,9 +3,9 @@ import pintrestLogo from '../assets/Path(1).svg'
 import instagramLogo from '../assets/Shape.svg'
 import facebookLogo from '../assets/Path.svg'
 
-const Socials = () => {
+const SocialIcons = () => {
   return (
-    <div className='socials'>
+    <div className='social-icons'>
             <img className='logo'
               src={facebookLogo}>
             </img>
@@ -19,4 +19,4 @@ const Socials = () => {
   )
 }
 
-export default Socials
+export default SocialIcons

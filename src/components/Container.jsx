@@ -1,15 +1,11 @@
 import '../App.css'
 import TimeCardHolder from './TimeCardHolder';
-import Socials from './Socials';
+import SocialIcons from './SocialIcons';
+import BackgroundImages from './BackgroundImages';
 import background from '../assets/Rectangle.svg'
-import Background from './Background';
 
-/**
- * @param {Object} props
- * @property {Array<number>} timeBetween 
- */
 
-const Layout = ({timeBetween}) => {
+const Container = () => {
   return (
     <div style={{
         backgroundImage: `url(${background})`,
@@ -18,11 +14,11 @@ const Layout = ({timeBetween}) => {
         flexDirection: 'column',
       }}>
         <h2 className='main-text'>WE'RE LAUNCHING SOON</h2>
-        <TimeCardHolder timeBetween={timeBetween}/>
-        <Socials/>
-        <Background />
+        <TimeCardHolder/>
+        <SocialIcons/>
+        <BackgroundImages />
     </div>
   )
 }
 
-export default Layout
+export default Container

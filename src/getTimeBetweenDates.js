@@ -1,9 +1,9 @@
 //@ts-check
 /**
- * 
+ * Returns the Days, Hours, Minutes, Seconds between two given {Date} objects.
  * @param {Date} startDate 
  * @param {Date} endDate 
- * @returns {number[]}
+ * @returns {string[]}
  * 
  */
 export const getTimeBetweenDates = (startDate, endDate) => {
@@ -13,13 +13,13 @@ export const getTimeBetweenDates = (startDate, endDate) => {
     let seconds = minutes % Math.floor((minutes !== 0) ? 1 : minutes) * 60
   
     return [
-        parseInt(Math.floor(days).toLocaleString('en-US', {
-            minimumIntegerDigits: 2})),
-        parseInt(Math.floor(hours).toLocaleString('en-US', {
-            minimumIntegerDigits: 2})),
-        parseInt(Math.floor(minutes).toLocaleString('en-US', {
-            minimumIntegerDigits: 2})),
-        parseInt(Math.floor(seconds).toLocaleString('en-US', {
-            minimumIntegerDigits: 2})),
+        Math.floor(days).toLocaleString('en-US', {
+            minimumIntegerDigits: 2}),
+        Math.floor(hours).toLocaleString('en-US', {
+            minimumIntegerDigits: 2}),
+        Math.floor(minutes).toLocaleString('en-US', {
+            minimumIntegerDigits: 2}),
+        Math.floor(seconds).toLocaleString('en-US', {
+            minimumIntegerDigits: 2}),
     ]
-  }
+}

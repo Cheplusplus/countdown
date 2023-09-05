@@ -1,18 +1,33 @@
 
 import '../App.css'
 import timeCards from '../assets/Group 3 Copy.svg'
+import { useTimeToEndOfMonth } from '../useTimeToEndOfMonth';
 
 /**
- * @param {Object} props
- * @property {Array<number>} timeBetween 
+ * This component returns the time card objects for displaying time till end
+ * of the month. 
  */
-const TimeCardHolder = ({timeBetween}) => {
-
+const TimeCardHolder = () => {
+   /**
+   * The update delay for the countdown timer
+   * @type {number}
+   */
+    const delay = 1000;
+   /**
+   * The time remaining till the end of the month, represented as an Array 
+   * [Days, Hours, Mins, Secs]
+   * @type {Array<number>}
+   */
+    const timeToEndOfMonth = useTimeToEndOfMonth(delay);
+    /**
+     * labels for the measures of time
+     * @type {Array<string>}
+     */
     const timeLabels = ['days', 'hours', 'minutes', 'seconds']
 
   return (
     <div className='time-card-holder'>
-    {timeBetween.map((time, i) => 
+    {timeToEndOfMonth.map((time, i) => 
       <div className='time-card'
         style={{
           backgroundImage: `url(${timeCards})`,

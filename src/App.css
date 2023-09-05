@@ -78,7 +78,7 @@ body > #root > div {
   transform: translateY(300%);
 }
 
-.socials {
+.social-icons {
   position: fixed;
   display: flex;
   margin: 0 auto;
