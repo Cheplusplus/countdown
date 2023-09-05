@@ -1,6 +1,11 @@
+
 import '../App.css'
 import timeCards from '../assets/Group 3 Copy.svg'
 
+/**
+ * @param {Object} props
+ * @property {Array<number>} timeBetween 
+ */
 const TimeCardHolder = ({timeBetween}) => {
 
     const timeLabels = ['days', 'hours', 'minutes', 'seconds']

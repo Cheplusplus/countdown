@@ -4,6 +4,11 @@ import Socials from './Socials';
 import background from '../assets/Rectangle.svg'
 import Background from './Background';
 
+/**
+ * @param {Object} props
+ * @property {Array<number>} timeBetween 
+ */
+
 const Layout = ({timeBetween}) => {
   return (
     <div style={{
