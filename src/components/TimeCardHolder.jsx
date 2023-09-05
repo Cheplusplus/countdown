@@ -29,9 +29,6 @@ const TimeCardHolder = () => {
     <div className='time-card-holder'>
     {timeToEndOfMonth.map((time, i) => 
       <div className='time-card'
-        style={{
-          backgroundImage: `url(${timeCards})`,
-        }}
         key={i}>
         <img className='time-card-img'
           src={timeCards}>
@@ -40,10 +37,11 @@ const TimeCardHolder = () => {
           {time}
         </span>
         <p className='time-card-label'>
-          {timeLabels[i].toUpperCase()}</p>
-        </div>
+          {timeLabels[i].toUpperCase()}
+        </p>
+      </div>
     )}
-  </div>
+    </div>
   )
 }
 
