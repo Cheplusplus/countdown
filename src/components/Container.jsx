@@ -1,4 +1,3 @@
-import '../App.css'
 import TimeCardHolder from './TimeCardHolder';
 import SocialIcons from './SocialIcons';
 import BackgroundImages from './BackgroundImages';

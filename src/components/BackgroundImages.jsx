@@ -1,4 +1,3 @@
-import '../App.css'
 import mountains from '../assets/Group 5.svg'
 import stars from '../assets/Combined Shape.svg'
 

@@ -1,5 +1,4 @@
 
-import '../App.css'
 import timeCards from '../assets/Group 3 Copy.svg'
 import { useTimeToEndOfMonth } from '../useTimeToEndOfMonth';
 

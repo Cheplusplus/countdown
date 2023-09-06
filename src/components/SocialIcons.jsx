@@ -1,4 +1,3 @@
-import '../App.css'
 import pintrestLogo from '../assets/Path(1).svg'
 import instagramLogo from '../assets/Shape.svg'
 import facebookLogo from '../assets/Path.svg'
